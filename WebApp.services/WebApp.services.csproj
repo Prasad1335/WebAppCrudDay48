@@ -35,6 +35,7 @@
       <HintPath>..\packages\Web.UI.WebControls.1.0.2.226\lib\Microsoft.Web.UI.WebControls.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -48,7 +49,9 @@
   <ItemGroup>
     <Compile Include="DepartmentService.cs" />
     <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserServices.cs" />
     <Compile Include="Utilities\HtmlHelper.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -76,6 +76,10 @@
     <Content Include="Pages\Departments\Deafult.aspx" />
     <Content Include="Pages\Departments\Delete.aspx" />
     <Content Include="Pages\Departments\Update.aspx" />
+    <Content Include="Pages\Users\CreateUser.aspx" />
+    <Content Include="Pages\Users\DeafultUser.aspx" />
+    <Content Include="Pages\Users\DeleteUser.aspx" />
+    <Content Include="Pages\Users\UpdateUser.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -110,6 +114,34 @@
     <Compile Include="Pages\Departments\Update.aspx.designer.cs">
       <DependentUpon>Update.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Users\CreateUser.aspx.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Users\CreateUser.aspx.designer.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Users\DeafultUser.aspx.cs">
+      <DependentUpon>DeafultUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Users\DeafultUser.aspx.designer.cs">
+      <DependentUpon>DeafultUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Users\DeleteUser.aspx.cs">
+      <DependentUpon>DeleteUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Users\DeleteUser.aspx.designer.cs">
+      <DependentUpon>DeleteUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Users\UpdateUser.aspx.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Users\UpdateUser.aspx.designer.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -124,7 +156,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Pages\Users\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebApp.services\WebApp.services.csproj">

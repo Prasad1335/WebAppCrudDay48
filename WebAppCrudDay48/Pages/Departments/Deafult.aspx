@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
-     <a href="Create.aspx">Add new department</a>
-    <br />
-    <br />
+
     <form class="DeafultForm" id="form1" runat="server">
+        <a href="Create.aspx">
+            <button type="button">Add new department</button></a>
 
         <div>
 
@@ -36,7 +36,7 @@
 
                         foreach (var department in departments)
                         {
-                %>
+                    %>
                     <tr>
                         <td><%= department.Id %></td>
                         <td><%= department.Name %></td>
@@ -46,7 +46,7 @@
                     </tr>
                     <%
                         }
-                %>
+                    %>
                 </tbody>
 
             </table>

@@ -63,7 +63,7 @@ namespace WebAppCrudDay48.Pages.Departments
                 TextBoxName.Text = department.Name;
                 TextBoxDescription.Text = department.Description;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 LabelStatus.ShowStatusMessage("Id parameter not found!");
             }

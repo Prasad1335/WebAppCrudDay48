@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebAppCrudDay48.Pages.Departments
+namespace WebAppCrudDay48.Pages.Users
 {
 
 
-    public partial class Deafult
+    public partial class DeafultUser
     {
 
         /// <summary>
