@@ -3,9 +3,9 @@
 
 table {
     border: 2px solid orange;
-    padding: 80px;
+    padding: 30px;
     background-color: antiquewhite;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .theading {
@@ -18,27 +18,42 @@ table {
 input[type=text] {
     width: 400px;
     border: 1px solid orange;
-    padding: 20px;
+    padding: 10px;
     margin-top: 5px;
     margin-bottom: 10px;
     font-size: 20px;
 }
 
+.dob {
+    width: 400px;
+    border: 1px solid orange;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+radio {
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 30px;
+}
+
 input[type=submit] {
     width: 45%;
     border: 1px solid grey;
-    padding: 15px;
+    padding: 10px;
     background-color: red;
     color: white;
-    font-size: 25px;
+    font-size: 15px;
 }
 
 input[type=button] {
     border: 1px solid grey;
-    padding: 15px;
+    padding: 10px;
     background-color: cornflowerblue;
     color: white;
-    font-size:25px;
+    font-size: 15px;
 }
 
 textarea {
@@ -48,7 +63,7 @@ textarea {
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 10px;
-   font-size: 20px;
+    font-size: 20px;
 }
 
 .DeafultForm {
@@ -76,12 +91,16 @@ p {
 
 div.status-message {
     width: 600px;
-    background: gainsboro;
+   /* background: gainsboro;*/
     color: red;
-    font-size:30px;
-    padding:10px;
+    font-size: 30px;
+    padding: 10px;
 }
 
 .readonly-data {
     border: 1px solid gray;
+}
+
+.defUser {
+    margin-top: 100px;
 }

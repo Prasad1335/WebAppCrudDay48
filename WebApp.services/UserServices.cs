@@ -9,12 +9,11 @@ namespace WebApp.services
 {
     public class UserServices
     {
-
         private static readonly string ConnectionString = ConfigurationManager.ConnectionStrings["UserManagement"].ConnectionString;
 
         public List<User> GetAll()
         {
-            var departments = new List<User>();
+            var users = new List<User>();
 
             using (var connection = new SqlConnection(ConnectionString))
             {
@@ -32,28 +31,27 @@ namespace WebApp.services
                         {
                             var user = new User
                             {
-                                Id = (int)reader["ID"],
-
+                                Id = (int)reader["Id"],
                                 FirstName = (string)reader["FirstName"],
                                 LastName = (string)reader["LastName"],
                                 DateOfBirth = (DateTime)reader["DateOfBirth"],
                                 Pan = (string)reader["Pan"],
-                                Address = (string)reader["Address"],
+                                Address = reader["Address"] == null ? (string)reader["Address"] : "null",
                                 Gender = (string)reader["Gender"],
-                                MobileNumber = (long)reader["MobileNumber"],
-                                Email = (string)reader["Email"],
-                                Comments = (string)reader["Comments"],
-                               // DepartmentId = (int)reader["DepartmentId"],
-                               
+                                //   MobileNumber = reader["MobileNumber"] == null ? (string)reader["MobileNumber"] : "null",
+                                Email = reader["Email"] == null ? (string)reader["Email"] : "null",
+                                Comments = reader["Comments"] == null ? (string)reader["Comments"] : "null",
+                                // DepartmentRefId = (int)reader["DepartmentRefId"],
                             };
 
-                            departments.Add(user);
+
+                            users.Add(user);
                         }
                     }
                 }
             }
 
-            return departments;
+            return users;
         }
 
         public void Add(User user)
@@ -75,7 +73,7 @@ namespace WebApp.services
                     command.Parameters.AddWithValue("@MobileNumber", user.MobileNumber);
                     command.Parameters.AddWithValue("@Email", user.Email);
                     command.Parameters.AddWithValue("@Comments", user.Comments);
-                   // command.Parameters.AddWithValue("@DepartmentId", user.DepartmentId);
+                    // command.Parameters.AddWithValue("@DepartmentId", user.DepartmentId);
 
                     connection.Open();
 
@@ -106,7 +104,7 @@ namespace WebApp.services
                     command.Parameters.AddWithValue("@MobileNumber", user.MobileNumber);
                     command.Parameters.AddWithValue("@Email", user.Email);
                     command.Parameters.AddWithValue("@Comments", user.Comments);
-                 //   command.Parameters.AddWithValue("@DepartmentId", user.DepartmentId);
+                    //   command.Parameters.AddWithValue("@DepartmentId", user.DepartmentId);
 
                     connection.Open();
 
@@ -159,17 +157,16 @@ namespace WebApp.services
                         {
                             var user = new User
                             {
+                                Id = (int)reader["Id"],
                                 FirstName = (string)reader["FirstName"],
                                 LastName = (string)reader["LastName"],
                                 DateOfBirth = (DateTime)reader["DateOfBirth"],
                                 Pan = (string)reader["Pan"],
-                                Address = (string)reader["Address"],
+                                Address = reader["Address"] == null ? (string)reader["Address"] : "null",
                                 Gender = (string)reader["Gender"],
-                                MobileNumber = (long)reader["MobileNumber"],
-                                Email = (string)reader["Email"],
-                                Comments = (string)reader["Comments"],
-                               // DepartmentId = (int)reader["DepartmentId"],
-
+                                // MobileNumber = reader["MobileNumber"] == null ? (string)reader["MobileNumber"] : "null",
+                                Email = reader["Email"] == null ? (string)reader["Email"] : "null",
+                                Comments = reader["Comments"] == null ? (string)reader["Comments"] : "null",
                             };
                             return user;
                         }

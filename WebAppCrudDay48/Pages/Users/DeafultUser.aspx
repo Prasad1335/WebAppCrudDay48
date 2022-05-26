@@ -8,9 +8,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>User View All Deatils</title>
+    <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
-    <form class="DeafultForm" id="form1" runat="server">
+    <form class="defUser" id="form1" runat="server">
         <a href="CreateUser.aspx">
             <button type="button">Add new user</button></a>
 
@@ -21,11 +22,13 @@
                 <caption>User View All Deatils</caption>
                 <thead class="theading">
                     <tr>
+                        <td>Id</td>
                         <td>FirstName</td>
                         <td>LastName</td>
                         <td>DateOfBirth</td>
                         <td>Pan</td>
                         <td>Address</td>
+                        <td>Gender</td>
                         <td>Mobile</td>
                         <td>Email</td>
                         <td>Comment</td>
@@ -51,7 +54,10 @@
                         <td><%= user.Address %></td>
                         <td><%= user.Gender %></td>
                         <td><%= user.MobileNumber %></td>
-                        <td><%= user.Email.GetFormattedValue() %></td>
+                        <td><%= user.Email %></td>
+                        <td><%= user.Comments %></td>
+                        <td><%= user.Id %></td>
+                        <%--<td><%= user.Email.GetFormattedValue() %></td>--%>
                         <td><a href="UpdateUser.aspx?id=<%= user.Id %>">Edit</a></td>
                         <td><a href="DeleteUser.aspx?id=<%= user.Id %>">Delete</a></td>
                     </tr>
