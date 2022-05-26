@@ -73,7 +73,7 @@ namespace WebApp.services
                     command.Parameters.AddWithValue("@MobileNumber", user.MobileNumber);
                     command.Parameters.AddWithValue("@Email", user.Email);
                     command.Parameters.AddWithValue("@Comments", user.Comments);
-                    // command.Parameters.AddWithValue("@DepartmentId", user.DepartmentId);
+                    command.Parameters.AddWithValue("@DepartmentRefId", user.DepartmentRefId);
 
                     connection.Open();
 
@@ -104,7 +104,7 @@ namespace WebApp.services
                     command.Parameters.AddWithValue("@MobileNumber", user.MobileNumber);
                     command.Parameters.AddWithValue("@Email", user.Email);
                     command.Parameters.AddWithValue("@Comments", user.Comments);
-                    //   command.Parameters.AddWithValue("@DepartmentId", user.DepartmentId);
+                    command.Parameters.AddWithValue("@DepartmentRefId", user.DepartmentRefId);
 
                     connection.Open();
 

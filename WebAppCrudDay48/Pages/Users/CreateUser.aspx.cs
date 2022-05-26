@@ -35,11 +35,11 @@ namespace WebAppCrudDay48.Pages.Users
                     DateOfBirth = DateTime.Parse(TextBoxDateOfBirth.Text),
                     Pan = TextBoxPan.Text,
                     Address = TextBoxAddress.Text,
-                    Gender = TextBoxEmail.Text,
-                   // MobileNumber = TextBoxMobileNumber.Text,
+                    Gender = TextBoxGender.Text,
+                    MobileNumber = TextBoxMobileNumber.Text,
                     Email = TextBoxEmail.Text,
                     Comments = TextBoxComments.Text,
-                   // DepartmentRefId = int.Parse(TextBoxDepartmentRefId.Text)
+                    DepartmentRefId = int.Parse(TextBoxDepartmentRefId.Text)
 
 
                 };

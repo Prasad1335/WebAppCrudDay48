@@ -12,14 +12,11 @@ namespace WebApp.services.Models
         public string Pan { get; set; }
         public string Address { get; set; }
         public string Gender { get; set; }
-        public long MobileNumber { get; set; }
+        public string MobileNumber { get; set; }
         public string Email { get; set; }
         public string Comments { get; set; }
-        //public int DepartmentId { get; set; }
-        //[ForeignKey("DepartmentId")]
-
-        //public Department department { get; set; } 
-
+        public int DepartmentRefId { get; set; }
+    
 
     }
 }

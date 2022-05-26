@@ -28,27 +28,27 @@ namespace WebAppCrudDay48.Pages.Users
             var userServices = new UserServices();
 
             try
-            {
+            { 
                 var idText = Request.QueryString["id"];
 
                 var user = new User
                 {
-                    Id = int.Parse(idText),
+                    //Id = int.Parse(idText),
 
                     //FirstName = TextBoxFirstName.Text,
-                    // LastName = TextBoxLastName.Text,
-                    // DateOfBirth = TextBoxDateOfBirth.Text,
-                    // Pan = TextBoxPan.Text,
-                    // Email = TextBoxEmail.Text,
-                    // MobileNumber = TextBoxMobileNumber.Text,
-                    // Email = TextBoxEmail.Text,
-                    // Comments = TextBoxComments.Text,
-                    // DepartmentRefId = TextDepartmentRefId.Text,
+                    //LastName = TextBoxLastName.Text,
+                    //DateOfBirth = TextBoxDateOfBirth.Text,
+                    //Pan = TextBoxPan.Text,
+                    //Email = TextBoxEmail.Text,
+                    //MobileNumber = TextBoxMobileNumber.Text,
+                    //Email = TextBoxEmail.Text,
+                    //Comments = TextBoxComments.Text,
+                    //DepartmentRefId = TextDepartmentRefId.Text,
 
 
                 };
 
-                //userServices.Update(user);
+                userServices.Update(user);
 
                 LabelStatus.ShowStatusMessage("user record successfully updated!");
             }
